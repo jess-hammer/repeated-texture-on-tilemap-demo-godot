@@ -15,6 +15,10 @@ run/main_scene="res://main_scene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="repeated-texture-on-tilemap-demo"
@@ -23,3 +27,4 @@ project/assembly_name="repeated-texture-on-tilemap-demo"
 
 textures/canvas_textures/default_texture_filter=0
 textures/canvas_textures/default_texture_repeat=1
+environment/defaults/default_clear_color=Color(0.172549, 0.160784, 0.164706, 1)
