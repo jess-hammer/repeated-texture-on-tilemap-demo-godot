@@ -11,7 +11,10 @@ void vertex(){
 
 void fragment() {
 	// only apply overlay_tex on the fully red parts of the original tiles
-	float mix_amount = floor(COLOR.r);
+	// filter white which is (R=1,G=1,B=1) cause it would otherwise also trigger
+	float mix_amount = step(0.9, COLOR.r)
+	             * (1.0 - step(0.3, COLOR.g))
+	             * (1.0 - step(0.3, COLOR.b));
 	
 	// sample the overlay_tex using worldPos
 	vec4 overlay_color = texture(overlay_tex, world_position * scale);
