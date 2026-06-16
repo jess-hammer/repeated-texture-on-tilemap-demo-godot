@@ -4,6 +4,10 @@ uniform sampler2D overlay_tex: repeat_enable, filter_nearest;
 uniform float scale = 0.006944444; // calculated by 1/texture size e.g. 1/144
 varying vec2 world_position;
 
+uniform float red_threshold = 0.9;
+uniform float non_red_threshold = 0.1;
+uniform float alpha_threshold = 0.5;
+
 void vertex(){
 	// calculate the world position for use in the fragment shader
     world_position = (MODEL_MATRIX * vec4(VERTEX, 0.0, 1.0)).xy;
