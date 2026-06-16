@@ -13,10 +13,10 @@ void fragment() {
 	// only apply overlay_tex on the fully red parts of the original tiles
 	// filter white which is (R=1,G=1,B=1) cause it would otherwise also trigger
 	// also filter out alpha values for the case that red pixels are next to transparent pixels (cause godot saves the color values in transparent pixel of neighboring color pixels)
-	float mix_amount = step(0.9, COLOR.r)
-	             	* (1.0 - step(0.3, COLOR.g))
-	             	* (1.0 - step(0.3, COLOR.b))
-	             	* step(0.5, COLOR.a);
+	float mix_amount = step(red_threshold, COLOR.r)
+	             	* (1.0 - step(non_red_threshold, COLOR.g))
+	             	* (1.0 - step(non_red_threshold, COLOR.b))
+	             	* step(alpha_threshold, COLOR.a);
 	
 	// sample the overlay_tex using worldPos
 	vec4 overlay_color = texture(overlay_tex, world_position * scale);
