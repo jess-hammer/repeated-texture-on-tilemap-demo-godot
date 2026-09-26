@@ -1,5 +1,5 @@
 # Repeated texture on a tilemap
-This is a demo of a very simple shader that overlays a texture across a tilemap using Godot 4.3
+This is a demo of a very simple shader that overlays a texture across a tilemap using Godot 4.7
 
 See equivalent version for Unity here: https://github.com/jess-hammer/repeated-texture-on-tilemap-demo-unity
 
