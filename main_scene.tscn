@@ -6,7 +6,12 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sl7t0"]
 shader = ExtResource("1_48ta0")
-shader_parameter/scale = 0.00694444
+shader_parameter/texture_width = 144
+shader_parameter/texture_height = 144
+shader_parameter/scale = 1.0
+shader_parameter/red_threshold = 0.9
+shader_parameter/non_red_threshold = 0.1
+shader_parameter/alpha_threshold = 0.5
 shader_parameter/overlay_tex = ExtResource("2_0v0wr")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8veta"]
